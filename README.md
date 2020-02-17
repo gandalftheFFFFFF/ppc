@@ -40,7 +40,7 @@ Need 1 argument of new project name
 # Usage example
 
 ```
-$ cd dir_with_python_projects>
+$ cd <dir_with_python_projects>
 $ ppc fancy_project
 < all kinds of magic >
 $ cd fancy_project
