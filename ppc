@@ -1,4 +1,11 @@
 #!/bin/bash
+set -e
+
+# Check for args
+if [[ $# -eq 0 ]]; then
+    echo 'Need 1 argument of new project name'
+    exit 1
+fi
 
 # Accept project name as arg and create the project root dir
 mkdir $1
