@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Accept project name as arg and create the project root dir
+mkdir $1
+
+cd $1
+
+# Create a main.py file with hello world contents
+cat > main.py << EOF
+
+def main():
+    print('hello, world!')
+
+
+if __name__ == '__main__':
+    main()
+EOF
+
+# Copy good gitignore from gitignore repo :)
+wget -O .gitignore https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
+
+# Expand gitignore
+echo ".idea/" >> .gitignore
+
+# Add default README.md
+cat > README.md << EOF
+# I will surely finish this project!
+
+EOF
+
+# Create a requirements.txt file
+cat > requirements.txt << EOF
+nose
+EOF
+
+wget -O .dockerignore https://raw.githubusercontent.com/themattrix/python-pypi-template/master/.dockerignore
+
+# Create a test folder
+mkdir test
+
+# Create a sample test file
+cat > test/sample_test.py << EOF
+import unittest
+
+# Run from project dir: nosetests test/
+
+class TestSomething(unittest.Testcase):
+    
+    def test_something(self):
+        self.assertTrue(1, 1)
+
+    def test_somthing_broken(self):
+        self.assertTrue(1, 2)
+
+EOF
+
+# Create a venv to use for the project
+python3 -m venv venv
+
+
+
+
