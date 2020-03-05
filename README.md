@@ -20,7 +20,7 @@ Add the directory to your PATH variable. Use it in your CLI: `$ ppc project_name
 $ wget -O ppc https://raw.githubusercontent.com/nielspedersen/ppc/master/ppc
 $ mkdir ~/bin
 $ mv ppc ~/bin
-$ PATH="$HOME/bin:$PATH"
+$ export PATH="$HOME/bin:$PATH"
 ```
 
 You can also add the `PATH` stuff to your `~/.bash_profile` or `~/.bash_rc`:
