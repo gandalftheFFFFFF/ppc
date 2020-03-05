@@ -26,7 +26,7 @@ $ export PATH="$HOME/bin:$PATH"
 You can also add the `PATH` stuff to your `~/.bash_profile` or `~/.bash_rc`:
 
 - Open `.bash_profile` or `.bash_rc`
-- Add a new line at the end: `PATH="$HOME/bin:PATH"`
+- Add a new line at the end: `export PATH="$HOME/bin:PATH"`
 - Save and close the file
 
 The `ppc` command should now be available to from bash:
