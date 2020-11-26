@@ -61,9 +61,6 @@ class TestSomething(unittest.TestCase):
 
 EOF
 
-# Create a venv to use for the project
-python3 -m venv venv
-
-
+git init
 
 
